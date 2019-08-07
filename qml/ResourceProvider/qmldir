@@ -1,0 +1,2 @@
+module ResourceProvider
+singleton Resources 1.0 Resources.qml
