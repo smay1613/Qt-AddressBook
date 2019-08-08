@@ -22,5 +22,4 @@ namespace
 
 std::pair<bool, std::vector<Contact>> ContactsReader::requestContactsBrowse()
 {
-    return std::make_pair(true, mockData);
 }

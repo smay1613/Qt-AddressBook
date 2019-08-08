@@ -1,9 +1,6 @@
 #include "contact.h"
 
 Contact::Contact(QString firstName, QString secondName, QString phone)
-    : m_phone {std::move(phone)},
-      m_firstName {std::move(firstName)},
-      m_secondName {std::move(secondName)}
 {
 }
 

@@ -15,9 +15,5 @@ Window {
 
     Rectangle {
         id: _background
-        z: -100
-        anchors.fill: parent
-        color: Style.backgroundColor
-        opacity: Style.emphasisOpacity
     }
 }
