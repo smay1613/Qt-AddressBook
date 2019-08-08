@@ -6,6 +6,10 @@ Rectangle {
     id: root
     property alias image: _internalImage
 
+    property real boundingRadius
+    width: boundingRadius
+    height: boundingRadius
+
     color: "transparent"
     radius: width / 2
     border.width: 2

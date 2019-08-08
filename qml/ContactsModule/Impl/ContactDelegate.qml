@@ -11,8 +11,7 @@ BaseListDelegate {
         anchors.left: root.left
         anchors.leftMargin: Style.defaultOffset
         anchors.verticalCenter: root.verticalCenter
-        height: root.height - 15
-        width: height
+        boundingRadius: root.height - 15
 
         image.source: Resources.contacts.defaultContactIcon
     }
