@@ -23,7 +23,7 @@ int ContactsModel::rowCount(const QModelIndex& parent) const
 
 QVariant ContactsModel::data(const QModelIndex& index, int role) const
 {
-    if (!index.isValid() && index.row() < rowCount(index)) {
+    if (!index.isValid() || index.row() > rowCount(index)) {
         return {};
     }
 
