@@ -8,9 +8,30 @@ BaseListDelegate {
 
     ImageBubble {
         id: _contactBubble
+        anchors.left: root.left
+        anchors.leftMargin: Style.defaultOffset
+        anchors.verticalCenter: root.verticalCenter
+        boundingRadius: root.height - 15
+
+        image.source: Resources.contacts.defaultContactIcon
     }
 
     Column {
-        id: _contactInfo
+        anchors.left: _contactBubble.right
+        anchors.leftMargin: Style.defaultOffset
+        anchors.verticalCenter: root.verticalCenter
+        Row {
+            spacing: Style.smallSpacing
+            BaseText {
+                text: firstname
+            }
+            BaseText {
+                text: surname
+            }
+        }
+        BaseText {
+            text: "+" + phoneNumber
+            color: Style.primaryColor
+        }
     }
 }

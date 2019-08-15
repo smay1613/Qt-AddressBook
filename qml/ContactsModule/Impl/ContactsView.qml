@@ -7,5 +7,7 @@ BaseListView {
     model: ContactsModel {}
 
     delegate: ContactDelegate {
+        width: root.width
+        height: 70
     }
 }
