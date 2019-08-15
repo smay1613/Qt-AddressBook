@@ -1,0 +1,3 @@
+[submodule "DBManager"]
+	path = DBManager
+	url = git@github.com:smay1613/Qt-Databases-Example.git
