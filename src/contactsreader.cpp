@@ -1,4 +1,6 @@
 #include "contactsreader.h"
+#include "dbprocessing.h"
+#include "dbtypes.h"
 
 namespace
 {

@@ -11,13 +11,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-S
+
+DEPENDENCY_LIBRARIES = DBManager
+include(dependencies.pri)
+
+DEPENDPATH += $$PWD/DBManager
+databaseworker.path = $$DEPENDPATH
+
 SOURCES += \
         src/contact.cpp \
         src/contactsmodel.cpp \
         src/contactsreader.cpp \
         main.cpp
-
 RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
@@ -27,14 +32,15 @@ QML2_IMPORT_PATH += $$PWD/qml
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+INSTALLS += databaseworker
 
 INCLUDEPATH += $$PWD/include
+INCLUDEPATH += $$PWD/DBManager/include
 
 HEADERS += \
     include/contact.h \
     include/contactsmodel.h \
     include/contactsreader.h
+
+DISTFILES += \
+    dependencies.pri
