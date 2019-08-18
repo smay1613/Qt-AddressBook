@@ -1,21 +1,21 @@
 #pragma once
 #include <QString>
 #include <QVariant>
-#include "dbtypes.h"
 
 class Contact
 {
 public:
     Contact() = default;
-    Contact(const DBTypes::DBEntry& entry);
+    Contact(const QVariantList& entry);
+    Contact(const QVariant& wrappedEntry);
     Contact(QString firstName, QString secondName, QString phone);
     QString firstName() const;
     QString secondName() const;
     QString phone() const;
-    operator DBTypes::DBEntry() const;
+    operator QVariantList() const;
 
 private:
-    DBTypes::DBIndex m_id;
+    int m_id;
     QString m_phone;
     QString m_firstName;
     QString m_secondName;

@@ -1,8 +1,8 @@
 #pragma once
 #include <QAbstractListModel>
 #include "contact.h"
-#include "contactsreader.h"
 
+class ContactsNetworkReader;
 class ContactsModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -14,10 +14,12 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
+public slots:
+    void onContactListDownloaded(std::vector<Contact> data);
+
 private:
     std::vector<Contact> m_contacts;
-    ContactsReader m_reader;
-
+    ContactsNetworkReader& m_readerInstance;
     enum ContactRoles
     {
         NameRole,
