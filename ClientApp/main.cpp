@@ -1,7 +1,8 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "contactsmodel.h"
-#include <QDebug>
+#include "clientmanager.h"
+#include "contactsnetworkreader.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,6 +10,9 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    ConnectionArgumentsParser parser {*QCoreApplication::instance()};
+    ClientManager manager {parser};
+    ContactsNetworkReader::instance().setClientManager(manager);
     ContactsModel::registerMe("Contacts");
 
     QQmlApplicationEngine engine;
@@ -20,6 +24,7 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
+
 
     return app.exec();
 }
