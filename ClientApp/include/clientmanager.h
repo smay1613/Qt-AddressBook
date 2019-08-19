@@ -21,7 +21,6 @@ public:
 signals:
     void contactsResponse(std::vector<Contact> data);
     void connectionStateChanged(NetTypes::ConnectionState state);
-    void reconnectionTimerStarted();
 
 public slots:
     void onSocketError(QAbstractSocket::SocketError socketError);
