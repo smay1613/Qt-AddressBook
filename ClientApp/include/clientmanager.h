@@ -5,6 +5,7 @@
 #include "connectionargumentsparser.h"
 #include "contact.h"
 
+
 class Package;
 class ClientManager : public QObject
 {

@@ -13,4 +13,7 @@ BaseListView {
         height: 70
     }
 
+
+
+
 }

@@ -4,6 +4,7 @@ import ContactsModule.Impl 1.0
 import StyleModule 1.0
 
 Window {
+    id : mainWindow
     visible: true
     width: 480
     height: 640

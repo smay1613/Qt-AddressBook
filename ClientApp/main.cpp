@@ -14,6 +14,8 @@ int main(int argc, char *argv[])
     ClientManager manager {parser};
     ContactsNetworkReader::instance().setClientManager(manager);
     ContactsModel::registerMe("Contacts");
+    qmlRegisterType<ContactsModel> ("Contacts", 1, 0, "ContactsModel");
+
 
     QQmlApplicationEngine engine;
     engine.addImportPath(":/qml");

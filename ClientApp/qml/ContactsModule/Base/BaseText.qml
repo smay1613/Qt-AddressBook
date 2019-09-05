@@ -5,3 +5,4 @@ Text {
     font.pointSize: 13
     color: Style.textColor
 }
+

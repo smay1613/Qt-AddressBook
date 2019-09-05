@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import StyleModule 1.0
 
+
 Rectangle {
     id: root
     color: Style.backgroundColor
@@ -9,4 +10,8 @@ Rectangle {
         id: _delegateArea
         anchors.fill: root
     }
+
+
+
+
 }

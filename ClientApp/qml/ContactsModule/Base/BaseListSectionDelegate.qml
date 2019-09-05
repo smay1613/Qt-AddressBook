@@ -5,6 +5,7 @@ Rectangle {
     height: childrenRect.height
     color: "lightsteelblue"
 
+
     Text {
         color: Style.textColor
         opacity: Style.secondaryOpacity
@@ -12,4 +13,6 @@ Rectangle {
         font.bold: true
         font.pixelSize: 20
     }
+
+
 }

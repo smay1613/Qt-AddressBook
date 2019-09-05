@@ -17,5 +17,7 @@
         <file>qml/ResourceProvider/Resources.qml</file>
         <file>qml/resources/default-contact-icon.svg</file>
         <file>qml/ContactsModule/Base/RoundImage.qml</file>
+        <file>qml/resources/default-add-contacts-image.svg</file>
+        <file>qml/ContactsModule/Base/AddContactWindow.qml</file>
     </qresource>
 </RCC>

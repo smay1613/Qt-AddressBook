@@ -3,6 +3,7 @@ import ContactsModule.Base 1.0
 import StyleModule 1.0
 import ResourceProvider 1.0
 
+
 BaseListDelegate {
     id: root
 
@@ -12,8 +13,8 @@ BaseListDelegate {
         anchors.leftMargin: Style.defaultOffset
         anchors.verticalCenter: root.verticalCenter
         boundingRadius: root.height - 15
-
         image.source: Resources.contacts.defaultContactIcon
+
     }
 
     Column {

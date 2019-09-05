@@ -3,6 +3,11 @@
 #include <QDebug>
 #include "contactsnetworkreader.h"
 
+void ContactsModel::addNewContact(int x)
+{
+    qWarning()<< "Add worked";
+}
+
 ContactsModel::ContactsModel()
     : m_readerInstance {ContactsNetworkReader::instance()}
 {
@@ -66,6 +71,11 @@ void ContactsModel::onContactListDownloaded(std::vector<Contact> data)
     emit endResetModel();
 
     qDebug() << "Contact list downloaded!" << rowCount() << " contacts available";
+}
+
+void ContactsModel::saveNewContact()
+{
+    qWarning()<< "signal worked";
 }
 
 bool ContactsModel::updateContacts()

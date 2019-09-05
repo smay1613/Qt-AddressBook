@@ -7,6 +7,8 @@ class ContactsModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
+    Q_INVOKABLE void addNewContact();
+
     ContactsModel();
     static void registerMe(const std::string& moduleName);
     int rowCount(const QModelIndex& parent = {}) const override;
@@ -16,6 +18,7 @@ public:
 
 public slots:
     void onContactListDownloaded(std::vector<Contact> data);
+    void saveNewContact();
 
 private:
     std::vector<Contact> m_contacts;
