@@ -3,7 +3,10 @@
 #include <memory>
 #include "contact.h"
 
-class DBProcessing;
+namespace db
+{
+class Processor;
+}
 class ContactsReader
 {
 public:
@@ -13,6 +16,6 @@ public:
     ~ContactsReader();
 
 private:
-    std::unique_ptr<DBProcessing> m_dbProcessor;
+    std::unique_ptr<db::Processor> m_dbProcessor;
 };
 

@@ -1,13 +1,10 @@
 #include "contact.h"
 
-Contact::Contact(const DBTypes::DBEntry& entry)
-{
-}
-
-Contact::Contact(QString firstName, QString secondName, QString phone)
+Contact::Contact(QString firstName, QString secondName, QString phone, DBTypes::DBIndex id)
     : m_phone {std::move(phone)},
       m_firstName {std::move(firstName)},
-      m_secondName {std::move(secondName)}
+      m_secondName {std::move(secondName)},
+      m_id {id}
 {
 }
 
@@ -24,8 +21,4 @@ QString Contact::secondName() const
 QString Contact::phone() const
 {
     return m_phone;
-}
-
-Contact::operator QVariantList() const
-{
 }
