@@ -22,9 +22,9 @@ QML2_IMPORT_PATH += $$PWD/qml
 QML_DESIGNER_IMPORT_PATH =
 
 INCLUDEPATH += $$PWD/include
-INCLUDEPATH += ../shared/include
+INCLUDEPATH += $$PWD/../shared/include
 
-LIBS += -L../shared/lib/ -lDBManager
+LIBS += -L$$PWD/../shared/lib/ -lDBManager
 
 HEADERS += \
     include/contact.h \
