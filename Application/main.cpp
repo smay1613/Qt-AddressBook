@@ -1,6 +1,8 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "contactsmodel.h"
+#include "clientmanager.h"
+#include "contactsworker.h"
 #include <QDebug>
 
 int main(int argc, char *argv[])
@@ -8,6 +10,10 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
+
+    net::ConnectionArgumentsParser parser {*QCoreApplication::instance()};
+    ClientManager manager {parser};
+    ContactsWorker::instance().setClientManager(manager);
 
     ContactsModel::registerMe("Contacts");
 

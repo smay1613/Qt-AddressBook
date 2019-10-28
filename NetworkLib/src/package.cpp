@@ -39,7 +39,8 @@ QDataStream& operator>>(QDataStream& stream, Package& package)
 
 void Package::fillTranslationStream()
 {
-    m_translationStream << static_cast<qint32>(m_type) << m_data;
+    m_translationStream << static_cast<qint32>(m_type)
+                        << m_data;
 }
 
 QVariant Package::data() const

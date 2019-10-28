@@ -17,8 +17,6 @@ TEMPLATE = lib
 
 DESTDIR = $$PWD/../shared/lib
 
-LIBS += -L$$PWD/../shared/lib -lDBManager
-
 headers.path = ../shared/include
 headers.files = include/networktypes.h \
                 include/package.h \
