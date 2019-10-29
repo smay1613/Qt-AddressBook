@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <memory>
-#include "contact.h"
+#include <QVariant>
 
 namespace db
 {
@@ -12,7 +12,7 @@ class ContactsReader
 public:
     ContactsReader();
     std::pair<bool,
-              std::vector<Contact>> requestContactsBrowse();
+              std::vector<QVariant>> requestContactsBrowse();
     ~ContactsReader();
 
 private:

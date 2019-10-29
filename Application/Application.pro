@@ -10,8 +10,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         src/contact.cpp \
         src/contactsmodel.cpp \
-        src/contactsreader.cpp \
+        src/contactsworker.cpp \
+        src/clientmanager.cpp \
         main.cpp
+
 RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
@@ -24,9 +26,10 @@ QML_DESIGNER_IMPORT_PATH =
 INCLUDEPATH += $$PWD/include
 INCLUDEPATH += $$PWD/../shared/include
 
-LIBS += -L$$PWD/../shared/lib/ -lDBManager
+LIBS += -L$$PWD/../shared/lib/ -lNetworkLib
 
 HEADERS += \
     include/contact.h \
     include/contactsmodel.h \
-    include/contactsreader.h
+    include/contactsworker.h \
+    include/clientmanager.h

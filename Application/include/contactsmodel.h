@@ -1,7 +1,7 @@
 #pragma once
 #include <QAbstractListModel>
 #include "contact.h"
-#include "contactsreader.h"
+#include "contactsworker.h"
 
 class ContactsModel : public QAbstractListModel
 {
@@ -14,9 +14,12 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
+private slots:
+    void onContactListDownloaded(const std::vector<Contact>& data);
+
 private:
     std::vector<Contact> m_contacts;
-    ContactsReader m_reader;
+    ContactsWorker m_worker;
 
     enum ContactRoles
     {
