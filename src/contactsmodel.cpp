@@ -55,6 +55,13 @@ QHash<int, QByteArray> ContactsModel::roleNames() const
     return roles;
 }
 
+void ContactsModel::startManualUpdate()
+{
+    if (!updateContacts()) {
+        qDebug() << "Can't update contacts during manual update!";
+    }
+}
+
 bool ContactsModel::updateContacts()
 {
     bool requestResult {false};

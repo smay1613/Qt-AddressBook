@@ -3,8 +3,12 @@ import ContactsModule.Base 1.0
 import StyleModule 1.0
 import ResourceProvider 1.0
 
-BaseListDelegate {
+Rectangle {
     id: root
+
+    color: Style.backgroundColor
+    opacity: _delegateArea.pressed ? Style.secondaryOpacity
+                                   : Style.emphasisOpacity
 
     ImageBubble {
         id: _contactBubble
@@ -33,5 +37,11 @@ BaseListDelegate {
             text: "+" + phoneNumber
             color: Style.primaryColor
         }
+    }
+
+
+    MouseArea {
+        id: _delegateArea
+        anchors.fill: root
     }
 }

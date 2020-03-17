@@ -7,6 +7,8 @@ Rectangle {
     property alias image: _internalImage
 
     property real boundingRadius
+    property bool recolorIcon: true
+
     width: boundingRadius
     height: boundingRadius
 
@@ -15,7 +17,7 @@ Rectangle {
     border.width: 2
     border.color: Style.primaryColor
 
-    RoundImage {
+    Image {
         id: _internalImage
         anchors.fill: root
         anchors.margins: Style.mediumOffset
@@ -24,6 +26,7 @@ Rectangle {
     }
 
     ColorOverlay {
+        visible: root.recolorIcon
         anchors.fill: _internalImage
         source: _internalImage
         color: Style.themeInvertedColor

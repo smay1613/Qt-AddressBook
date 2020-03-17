@@ -1,9 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>qml/ContactsModule/Base/BaseListDelegate.qml</file>
-        <file>qml/ContactsModule/Base/BaseListSectionDelegate.qml</file>
-        <file>qml/ContactsModule/Base/BaseListView.qml</file>
         <file>qml/ContactsModule/Impl/ContactsView.qml</file>
         <file>qml/StyleModule/Style.qml</file>
         <file>qml/ContactsModule/Base/qmldir</file>
@@ -16,6 +13,5 @@
         <file>qml/ResourceProvider/qmldir</file>
         <file>qml/ResourceProvider/Resources.qml</file>
         <file>qml/resources/default-contact-icon.svg</file>
-        <file>qml/ContactsModule/Base/RoundImage.qml</file>
     </qresource>
 </RCC>
